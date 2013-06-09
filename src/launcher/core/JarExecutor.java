@@ -30,7 +30,11 @@ public class JarExecutor {
 		}
 		return tmp;
 	}
-
+	
+	/*
+	 * System.exit is called here as a custom function to close the JVM
+	 * (Rather than having the Java process still run after LodeScapes window is closed)
+	 */
 	public void execute() throws IOException {
 		RUNTIME.exec(recentArgument); // execute the argument on the command line.
 		System.exit(0);
